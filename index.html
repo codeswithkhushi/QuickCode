@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheat Sheet Corner</title>
+<meta name="description" content="HTML, CSS, JavaScript, Git and terminal cheat sheets, from beginner to advanced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#hero">Cheat Sheet Corner</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#sheets">Sheets</a>
+    <a href="#contact">Contact</a>
+    <button id="theme" type="button" aria-label="Switch dark mode">Dark</button>
+  </nav>
+</header>
+
+<main>
+  <section id="hero">
+    <div class="hero-text">
+      <h1>🐰 A sweet little shortcut to smarter coding.</h1>
+      <p>🐣A cozy little collection of HTML, CSS, JavaScript, Git & Terminal commands to make coding a little easier.🌸💫</p>
+      <a class="btn" href="#sheets">Open the sheets</a>
+    </div>
+    <pre class="note terminal-note"><code><span>● ● ●</span>     coding corner
+
+HTML  ♡ build
+CSS   ✦ style
+JS    ☼ magic
+Git   ♡ save
+
+code with a smile ♡</code></pre>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+</p>Hi, I’m Khushi, a B.Tech CSE student. ♡ This is my little coding corner — a collection of the commands and basics I come back to again and again. From simple shortcuts to tricky little things, everything is here to make coding a bit easier. Search, explore, and happy coding!✨
+  </section>
+
+  <section id="sheets">
+    <h2>Sheets</h2>
+    <label class="search">
+      <span class="sr">Search sheets</span>
+      <input id="q" type="search" placeholder="Search: center, loop, undo, commit, npm...">
+    </label>
+    <p id="empty" hidden>No match. Try a shorter word like "flex", "git" or "loop".</p>
+
+    <div class="chips" role="group" aria-label="Filter by topic"><button type="button" class="chip on" data-g="all">All</button><button type="button" class="chip" data-g="html">HTML</button><button type="button" class="chip" data-g="css">CSS</button><button type="button" class="chip" data-g="js">JavaScript</button><button type="button" class="chip" data-g="git">Git</button><button type="button" class="chip" data-g="term">Terminal</button></div>
+    <p id="count" class="count"></p>
+    <div class="cards">
+      <article class="card html" data-group="html">
+        <h3>HTML starter (beginner)</h3>
+        <ul>
+          <li data-k="start boilerplate"><code>&lt;!DOCTYPE html&gt;</code><span>Tell the browser this is HTML5</span></li>
+          <li data-k=""><code>&lt;html lang="en"&gt;</code><span>Root element of the page</span></li>
+          <li data-k="encoding utf"><code>&lt;meta charset="UTF-8"&gt;</code><span>Fix weird characters</span></li>
+          <li data-k="responsive phone"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code><span>Needed for mobile layouts</span></li>
+          <li data-k="tab"><code>&lt;title&gt;My Page&lt;/title&gt;</code><span>Text on the browser tab</span></li>
+          <li data-k="css connect"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code><span>Attach a CSS file</span></li>
+          <li data-k="js connect"><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code><span>Attach a JS file (before &lt;/body&gt;)</span></li>
+          <li data-k="comment"><code>&lt;!-- note --&gt;</code><span>Comment, not shown on page</span></li>
+        </ul>
+      </article>
+      <article class="card html" data-group="html">
+        <h3>HTML text and links</h3>
+        <ul>
+          <li data-k="title heading"><code>&lt;h1&gt;Heading&lt;/h1&gt;</code><span>Main heading, h1 to h6</span></li>
+          <li data-k="text"><code>&lt;p&gt;Paragraph&lt;/p&gt;</code><span>A paragraph of text</span></li>
+          <li data-k="bold italic"><code>&lt;strong&gt;bold&lt;/strong&gt; &lt;em&gt;italic&lt;/em&gt;</code><span>Bold and italic text</span></li>
+          <li data-k="new line"><code>&lt;br&gt;</code><span>Line break</span></li>
+          <li data-k="divider"><code>&lt;hr&gt;</code><span>Horizontal line</span></li>
+          <li data-k="anchor link"><code>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code><span>Link to another site</span></li>
+          <li data-k="scroll"><code>&lt;a href="#about"&gt;Go&lt;/a&gt;</code><span>Jump to a section by id</span></li>
+          <li data-k="new tab"><code>&lt;a href="x.html" target="_blank"&gt;Open&lt;/a&gt;</code><span>Open link in a new tab</span></li>
+          <li data-k="email"><code>&lt;a href="mailto:me@mail.com"&gt;Mail&lt;/a&gt;</code><span>Open the email app</span></li>
+          <li data-k="box wrapper"><code>&lt;div class="box"&gt;...&lt;/div&gt;</code><span>Generic block container</span></li>
+          <li data-k="inline"><code>&lt;span&gt;text&lt;/span&gt;</code><span>Generic inline container</span></li>
+        </ul>
+      </article>
+      <article class="card html" data-group="html">
+        <h3>HTML images, lists, tables, media</h3>
+        <ul>
+          <li data-k="picture photo"><code>&lt;img src="a.jpg" alt="Describe it"&gt;</code><span>Image with alt text</span></li>
+          <li data-k="list bullets"><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code><span>Bullet list</span></li>
+          <li data-k="list numbers"><code>&lt;ol&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ol&gt;</code><span>Numbered list</span></li>
+          <li data-k="rows columns"><code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;td&gt;Asha&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code><span>Basic table: tr row, th head, td cell</span></li>
+          <li data-k="movie"><code>&lt;video src="a.mp4" controls&gt;&lt;/video&gt;</code><span>Video with play controls</span></li>
+          <li data-k="sound music"><code>&lt;audio src="a.mp3" controls&gt;&lt;/audio&gt;</code><span>Audio player</span></li>
+          <li data-k="embed youtube map"><code>&lt;iframe src="URL"&gt;&lt;/iframe&gt;</code><span>Embed another page</span></li>
+          <li data-k="favicon"><code>&lt;link rel="icon" href="favicon.ico"&gt;</code><span>Tab icon</span></li>
+        </ul>
+      </article>
+      <article class="card html" data-group="html">
+        <h3>HTML forms</h3>
+        <ul>
+          <li data-k="submit post get"><code>&lt;form action="/send" method="post"&gt;</code><span>Start a form</span></li>
+          <li data-k=""><code>&lt;label for="n"&gt;Name&lt;/label&gt;</code><span>Text for an input (match its id)</span></li>
+          <li data-k="text field"><code>&lt;input type="text" id="n" name="name" placeholder="Your name"&gt;</code><span>Text box</span></li>
+          <li data-k="validation"><code>&lt;input type="email" required&gt;</code><span>Email field that must be filled</span></li>
+          <li data-k="login"><code>&lt;input type="password"&gt;</code><span>Hidden characters</span></li>
+          <li data-k=""><code>&lt;input type="checkbox"&gt; &lt;input type="radio"&gt;</code><span>Tick box and single choice</span></li>
+          <li data-k="message"><code>&lt;textarea rows="4"&gt;&lt;/textarea&gt;</code><span>Multi-line text</span></li>
+          <li data-k="dropdown menu"><code>&lt;select&gt;&lt;option&gt;One&lt;/option&gt;&lt;/select&gt;</code><span>Dropdown</span></li>
+          <li data-k="click"><code>&lt;button type="submit"&gt;Send&lt;/button&gt;</code><span>Submit the form</span></li>
+        </ul>
+      </article>
+      <article class="card html" data-group="html">
+        <h3>HTML semantic tags</h3>
+        <ul>
+          <li data-k="layout structure"><code>&lt;header&gt; &lt;nav&gt; &lt;main&gt;</code><span>Top of page, menu, main content</span></li>
+          <li data-k=""><code>&lt;section&gt; &lt;article&gt;</code><span>Group content, stand-alone post</span></li>
+          <li data-k=""><code>&lt;aside&gt; &lt;footer&gt;</code><span>Sidebar, bottom of page</span></li>
+          <li data-k="attribute"><code>&lt;div id="x" class="y"&gt;</code><span>id is unique, class can repeat</span></li>
+          <li data-k=""><code>&lt;button disabled&gt;</code><span>Attribute that turns a button off</span></li>
+        </ul>
+      </article>
+      <article class="card css" data-group="css">
+        <h3>CSS selectors and colors</h3>
+        <ul>
+          <li data-k="tag selector"><code>p { color: red; }</code><span>Style every p tag</span></li>
+          <li data-k="class"><code>.card { }</code><span>Style class="card"</span></li>
+          <li data-k="id"><code>#hero { }</code><span>Style id="hero"</span></li>
+          <li data-k="descendant nested"><code>div p { }</code><span>p inside a div</span></li>
+          <li data-k="hover"><code>a:hover { }</code><span>When mouse is over</span></li>
+          <li data-k="multiple group"><code>h1, h2 { }</code><span>Same style for both</span></li>
+          <li data-k="reset"><code>* { margin: 0; }</code><span>Select everything</span></li>
+          <li data-k="font colour"><code>color: #14213d;</code><span>Text color</span></li>
+          <li data-k="bg"><code>background-color: rgb(255, 0, 0);</code><span>Background color</span></li>
+          <li data-k="custom property theme"><code>:root { --main: #3d7bff; }</code><span>Define a CSS variable</span></li>
+          <li data-k=""><code>color: var(--main);</code><span>Use a CSS variable</span></li>
+        </ul>
+      </article>
+      <article class="card css" data-group="css">
+        <h3>CSS text and fonts</h3>
+        <ul>
+          <li data-k="typeface"><code>font-family: Arial, sans-serif;</code><span>Choose font</span></li>
+          <li data-k="big small"><code>font-size: 1.2rem;</code><span>Text size</span></li>
+          <li data-k="thick"><code>font-weight: 700;</code><span>Bold</span></li>
+          <li data-k="centre middle"><code>text-align: center;</code><span>Align text</span></li>
+          <li data-k=""><code>line-height: 1.6;</code><span>Space between lines</span></li>
+          <li data-k="underline"><code>text-decoration: none;</code><span>Remove underline from links</span></li>
+          <li data-k="capital"><code>text-transform: uppercase;</code><span>ALL CAPS</span></li>
+          <li data-k=""><code>letter-spacing: 1px;</code><span>Space between letters</span></li>
+        </ul>
+      </article>
+      <article class="card css" data-group="css">
+        <h3>CSS box model and look</h3>
+        <ul>
+          <li data-k="center outside"><code>margin: 1rem auto;</code><span>Space outside, auto centers a block</span></li>
+          <li data-k="inside"><code>padding: 1rem;</code><span>Space inside the border</span></li>
+          <li data-k="outline"><code>border: 2px solid #000;</code><span>Border</span></li>
+          <li data-k="round"><code>border-radius: 8px;</code><span>Rounded corners</span></li>
+          <li data-k="size"><code>width: 100%; max-width: 600px;</code><span>Fluid but capped width</span></li>
+          <li data-k="viewport"><code>height: 100vh;</code><span>Full screen height</span></li>
+          <li data-k=""><code>box-shadow: 4px 4px 0 #000;</code><span>Shadow</span></li>
+          <li data-k=""><code>box-sizing: border-box;</code><span>Padding stays inside width</span></li>
+          <li data-k="scroll"><code>overflow: hidden;</code><span>Cut off extra content</span></li>
+          <li data-k="hidden"><code>display: none;</code><span>Hide an element</span></li>
+          <li data-k="transparent"><code>opacity: 0.5;</code><span>Make see-through</span></li>
+          <li data-k="mouse"><code>cursor: pointer;</code><span>Hand cursor</span></li>
+        </ul>
+      </article>
+      <article class="card css" data-group="css">
+        <h3>CSS Flexbox</h3>
+        <ul>
+          <li data-k="row"><code>display: flex;</code><span>Turn on flex on the parent</span></li>
+          <li data-k=""><code>flex-direction: column;</code><span>Stack vertically</span></li>
+          <li data-k="horizontal"><code>justify-content: space-between;</code><span>Spread items on the main axis</span></li>
+          <li data-k="centre middle"><code>justify-content: center;</code><span>Center on the main axis</span></li>
+          <li data-k="vertical middle"><code>align-items: center;</code><span>Center on the cross axis</span></li>
+          <li data-k=""><code>gap: 1rem;</code><span>Space between items</span></li>
+          <li data-k=""><code>flex-wrap: wrap;</code><span>Let items drop to a new line</span></li>
+          <li data-k=""><code>flex: 1;</code><span>Item grows to fill space</span></li>
+          <li data-k=""><code>align-self: flex-end;</code><span>Move one item</span></li>
+        </ul>
+      </article>
+      <article class="card grid" data-group="css">
+        <h3>CSS Grid</h3>
+        <ul>
+          <li data-k=""><code>display: grid;</code><span>Turn on grid on the parent</span></li>
+          <li data-k=""><code>grid-template-columns: repeat(3, 1fr);</code><span>Three equal columns</span></li>
+          <li data-k=""><code>grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));</code><span>Responsive cards, no media query</span></li>
+          <li data-k=""><code>grid-template-rows: auto 1fr;</code><span>Row sizes</span></li>
+          <li data-k=""><code>gap: 1rem;</code><span>Space between cells</span></li>
+          <li data-k="merge"><code>grid-column: span 2;</code><span>Item takes 2 columns</span></li>
+          <li data-k="centre"><code>place-items: center;</code><span>Center every item</span></li>
+        </ul>
+      </article>
+      <article class="card css" data-group="css">
+        <h3>CSS position, responsive, motion</h3>
+        <ul>
+          <li data-k=""><code>position: relative;</code><span>Anchor for absolute children</span></li>
+          <li data-k="corner"><code>position: absolute; top: 0; right: 0;</code><span>Place inside a relative parent</span></li>
+          <li data-k="sticky navbar"><code>position: fixed;</code><span>Stays on screen</span></li>
+          <li data-k="header"><code>position: sticky; top: 0;</code><span>Sticks while scrolling</span></li>
+          <li data-k="front"><code>z-index: 10;</code><span>Layer order</span></li>
+          <li data-k="mobile responsive"><code>@media (max-width: 600px) { }</code><span>Styles for small screens</span></li>
+          <li data-k="animation hover"><code>transition: all .3s;</code><span>Smooth change</span></li>
+          <li data-k="zoom"><code>transform: scale(1.1) rotate(5deg);</code><span>Resize or turn</span></li>
+          <li data-k=""><code>@keyframes spin { to { transform: rotate(360deg); } }</code><span>Define an animation</span></li>
+          <li data-k=""><code>img { max-width: 100%; object-fit: cover; }</code><span>Responsive image</span></li>
+        </ul>
+      </article>
+      <article class="card js" data-group="js">
+        <h3>JavaScript basics</h3>
+        <ul>
+          <li data-k="print debug"><code>console.log("hi");</code><span>Print to browser console</span></li>
+          <li data-k="variable"><code>let x = 5; const y = 10;</code><span>let can change, const cannot</span></li>
+          <li data-k=""><code>function add(a, b) { return a + b; }</code><span>Define a function</span></li>
+          <li data-k=""><code>const add = (a, b) =&gt; a + b;</code><span>Arrow function</span></li>
+          <li data-k="condition"><code>if (x &gt; 3) { } else { }</code><span>Decision</span></li>
+          <li data-k="repeat"><code>for (let i = 0; i &lt; 5; i++) { }</code><span>Loop 5 times</span></li>
+          <li data-k="list"><code>const a = [1, 2, 3]; a.push(4);</code><span>Array and add item</span></li>
+          <li data-k="loop"><code>a.map(n =&gt; n * 2)</code><span>New array, each item changed</span></li>
+          <li data-k="search"><code>a.filter(n =&gt; n &gt; 1)</code><span>Keep matching items</span></li>
+          <li data-k="count size"><code>a.length</code><span>Number of items</span></li>
+          <li data-k="dictionary"><code>const p = { name: "Asha", age: 20 };</code><span>Object</span></li>
+          <li data-k="text join"><code>`Hello ${name}`</code><span>Template string</span></li>
+          <li data-k="delay wait"><code>setTimeout(() =&gt; { }, 1000);</code><span>Run after 1 second</span></li>
+          <li data-k="request http"><code>fetch(url).then(r =&gt; r.json())</code><span>Get data from an API</span></li>
+          <li data-k=""><code>JSON.stringify(obj) / JSON.parse(str)</code><span>Object to text and back</span></li>
+        </ul>
+      </article>
+      <article class="card js" data-group="js">
+        <h3>JavaScript DOM and events</h3>
+        <ul>
+          <li data-k="select"><code>document.getElementById("q")</code><span>Find element by id</span></li>
+          <li data-k="select"><code>document.querySelector(".card")</code><span>First match by CSS selector</span></li>
+          <li data-k="select list"><code>document.querySelectorAll("li")</code><span>All matches</span></li>
+          <li data-k="event button"><code>el.addEventListener("click", fn)</code><span>Run code on click</span></li>
+          <li data-k=""><code>el.textContent = "New";</code><span>Change text</span></li>
+          <li data-k=""><code>el.innerHTML = "&lt;b&gt;Hi&lt;/b&gt;";</code><span>Change inner HTML</span></li>
+          <li data-k="dark mode"><code>el.classList.toggle("on");</code><span>Add or remove a class</span></li>
+          <li data-k=""><code>el.style.color = "red";</code><span>Change style from JS</span></li>
+          <li data-k=""><code>document.createElement("li")</code><span>Make a new element</span></li>
+          <li data-k=""><code>parent.appendChild(el)</code><span>Add element to page</span></li>
+          <li data-k=""><code>el.setAttribute("href", "#")</code><span>Set an attribute</span></li>
+          <li data-k="store"><code>localStorage.setItem("k", "v");</code><span>Save in browser</span></li>
+          <li data-k=""><code>localStorage.getItem("k")</code><span>Read saved value</span></li>
+        </ul>
+      </article>
+      <article class="card git" data-group="git">
+        <h3>Git setup and basics</h3>
+        <ul>
+          <li data-k="setup"><code>git config --global user.name "Name"</code><span>Set your name once</span></li>
+          <li data-k="setup"><code>git config --global user.email "me@mail.com"</code><span>Set your email once</span></li>
+          <li data-k="new"><code>git init</code><span>Start a repo</span></li>
+          <li data-k="copy github"><code>git clone URL</code><span>Download a repo</span></li>
+          <li data-k=""><code>git status</code><span>See what changed</span></li>
+          <li data-k=""><code>git add .</code><span>Stage all changes</span></li>
+          <li data-k=""><code>git add file.txt</code><span>Stage one file</span></li>
+          <li data-k=""><code>git commit -m "message"</code><span>Save a snapshot</span></li>
+          <li data-k="history"><code>git log --oneline</code><span>Short history</span></li>
+          <li data-k="compare"><code>git diff</code><span>See exact line changes</span></li>
+        </ul>
+      </article>
+      <article class="card git" data-group="git">
+        <h3>Git branches</h3>
+        <ul>
+          <li data-k=""><code>git branch</code><span>List branches</span></li>
+          <li data-k="new"><code>git branch feature</code><span>Create a branch</span></li>
+          <li data-k="checkout change"><code>git switch feature</code><span>Move to a branch</span></li>
+          <li data-k=""><code>git switch -c feature</code><span>Create and move</span></li>
+          <li data-k="join"><code>git merge feature</code><span>Merge into current branch</span></li>
+          <li data-k="remove"><code>git branch -d feature</code><span>Delete merged branch</span></li>
+          <li data-k="save temporary"><code>git stash</code><span>Hide changes for later</span></li>
+          <li data-k=""><code>git stash pop</code><span>Bring stashed changes back</span></li>
+        </ul>
+      </article>
+      <article class="card git" data-group="git">
+        <h3>Git undo and fix</h3>
+        <ul>
+          <li data-k="discard undo"><code>git restore file.txt</code><span>Throw away edits in a file</span></li>
+          <li data-k="undo add"><code>git restore --staged file.txt</code><span>Unstage a file</span></li>
+          <li data-k="edit"><code>git commit --amend -m "new"</code><span>Fix last commit message</span></li>
+          <li data-k="undo"><code>git reset --soft HEAD~1</code><span>Undo last commit, keep changes</span></li>
+          <li data-k="danger delete"><code>git reset --hard HEAD~1</code><span>Undo last commit and changes</span></li>
+          <li data-k=""><code>git revert HEAD</code><span>Safe undo with a new commit</span></li>
+          <li data-k="remove"><code>git rm --cached file.txt</code><span>Stop tracking a file</span></li>
+        </ul>
+      </article>
+      <article class="card git" data-group="git">
+        <h3>Git and GitHub remote</h3>
+        <ul>
+          <li data-k="link"><code>git remote add origin URL</code><span>Connect to GitHub</span></li>
+          <li data-k=""><code>git remote -v</code><span>Show remote links</span></li>
+          <li data-k="upload"><code>git push -u origin main</code><span>Upload your commits</span></li>
+          <li data-k="update"><code>git pull</code><span>Download and merge changes</span></li>
+          <li data-k=""><code>git fetch</code><span>Download without merging</span></li>
+          <li data-k="release"><code>git tag v1.0</code><span>Mark a version</span></li>
+          <li data-k="ignore"><code>echo node_modules &gt;&gt; .gitignore</code><span>Ignore files in Git</span></li>
+        </ul>
+      </article>
+      <article class="card term" data-group="term">
+        <h3>Terminal basics</h3>
+        <ul>
+          <li data-k="path"><code>pwd</code><span>Where am I? (Windows CMD: cd)</span></li>
+          <li data-k="dir show"><code>ls</code><span>List files (Windows CMD: dir)</span></li>
+          <li data-k="open"><code>cd folder</code><span>Go into a folder</span></li>
+          <li data-k="back"><code>cd ..</code><span>Go up one folder</span></li>
+          <li data-k="create"><code>mkdir myapp</code><span>Make a folder</span></li>
+          <li data-k="create"><code>touch index.html</code><span>Make an empty file (PowerShell: ni)</span></li>
+          <li data-k=""><code>cp a.txt b.txt</code><span>Copy a file (Windows: copy)</span></li>
+          <li data-k="rename"><code>mv a.txt b.txt</code><span>Move or rename (Windows: move, ren)</span></li>
+          <li data-k="remove"><code>rm file.txt</code><span>Delete a file (Windows: del)</span></li>
+          <li data-k="remove"><code>rm -r folder</code><span>Delete a folder</span></li>
+          <li data-k="read"><code>cat file.txt</code><span>Show file content (Windows: type)</span></li>
+          <li data-k=""><code>clear</code><span>Clean the screen (Windows: cls)</span></li>
+          <li data-k="editor"><code>code .</code><span>Open folder in VS Code</span></li>
+        </ul>
+      </article>
+      <article class="card term" data-group="term">
+        <h3>Node, npm and Vercel</h3>
+        <ul>
+          <li data-k="npm version"><code>node -v</code><span>Check Node version</span></li>
+          <li data-k=""><code>node app.js</code><span>Run a JS file</span></li>
+          <li data-k="new project"><code>npm init -y</code><span>Create package.json</span></li>
+          <li data-k="add"><code>npm install express</code><span>Install a package</span></li>
+          <li data-k=""><code>npm install -D nodemon</code><span>Dev-only package</span></li>
+          <li data-k=""><code>npm uninstall express</code><span>Remove a package</span></li>
+          <li data-k=""><code>npm start</code><span>Run the start script</span></li>
+          <li data-k=""><code>npm run dev</code><span>Run the dev script</span></li>
+          <li data-k="local server"><code>npx serve</code><span>Serve a folder locally</span></li>
+          <li data-k="deploy"><code>npm i -g vercel</code><span>Install Vercel CLI</span></li>
+          <li data-k="publish live"><code>vercel --prod</code><span>Deploy to production</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Spotted a mistake or want a sheet added? Write to me.</p>
+    <ul class="links">
+      <li><a href="mailto:your-email@example.com">your-email@example.com</a></li>
+      <li><a href="https://github.com/your-username">github.com/your-username</a></li>
+      <li><a href="https://www.linkedin.com/in/your-username">linkedin.com/in/your-username</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>Built by Khushi. Last updated October 2026.</footer>
+<script src="script.js"></script>
+</body>
+</html>
